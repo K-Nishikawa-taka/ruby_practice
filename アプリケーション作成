@@ -1,0 +1,38 @@
+Railsのアプリケーションの作成開始
+
+１. Railsアプリケーションのひな形を作成する
+ターミナルに
+rails new hobby_rooms
+
+２. 作成したフォルダへ移動する
+ターミナルに
+cd hobby_rooms
+
+
+３. コントローラーを作成する
+ターミナルに
+rails g controller homes
+
+４. アクションを定義する
+Homesコントローラに
+def top
+end
+
+５. ルーティングを設定する
+route.rbに
+get ‘top’ => ‘homes#top’
+
+６. ビューファイルを作成する
+homesファイル内にNew Fileでtop.html.erbを作成
+
+７. アプリケーションサーバを起動する
+ターミナルで
+rails s
+
+８. URLにアクセスする
+Preview → Preview Running Applicationでブラウザ画面を表示
+URLの末尾に/topを追加
+ブラウザを開くボタンを押す
+
+９. アプリケーションサーバを停止する
+ターミナル上でctrl + c
